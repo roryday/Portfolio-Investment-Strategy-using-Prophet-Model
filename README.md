@@ -31,55 +31,32 @@ This project demonstrates a project for evaluating and optimizing ETF investment
 ![Prophet Model](visuals/Prophet_Model_Optimized.png)
 ![Model Comparison](visuals/Model_Accuracy_Comparison.png)
 
-### 3. 💰 Strategy Simulation & Backtesting
-
-- Simulated multiple investment strategies:
+### 3. Strategy Simulation & Backtesting
+To investigate best strategies for investment, multiple strategies are simulated under following Condtions:
+1. Investment Period: 2022-09-01 to 2025-05-02
+2. Invested Cash: $1500 monthly for DCA and $48000 for Lump Sum
+3. Simulated strategies:
   - Lump Sum Investment
   - Optimized Lump Sum Allocation
-  - DCA Rebalancing every 2/4/6 months
-  - Forecast-weighted DCA based on expected returns
+  - DCA Rebalancing every 1/2/4/6 months
+Among all strategies, Optimized Lump Sum strategies showed the best total return (with allocations of SPY: 29.20% QQQ: 19.01% SCHD: 10.96% TLTW: 10.91% GLD: 29.92%)
+![Portfolio Comparison](visuals/Portfollio_Comparison.png)
+After simulating various strategies, key performance metrics—cumulative return, annual return, volatility, drawdown, Sharpe ratio, and Sortino ratio—were calculated for comparison. While the Lump Sum strategy achieved the highest returns and risk-adjusted performance, it also carried greater drawdown and requires large upfront capital. Therefore, this project adopts the DCA with 2-month rebalancing strategy, which demonstrated the strongest Sharpe and Sortino ratios among all DCA methods, offering a more practical and balanced approach for most investors.
+![Portfolio Comparison](visuals/Portfollio_Comparison_table.png)
 
-- Calculated cumulative return, annual return, volatility, drawdown, Sharpe and Sortino ratios
+### 4. Portfolio Rebalancing Logic
+Finally, the model uses current ETF holdings and a new investment amount (e.g., $3000) to generate a realistic and actionable rebalancing plan. Key steps include:
+- Defining current ETF holdings in number of shares
+- Applying forecast-based weights to allocate new capital
+- Rounding share purchases to the nearest whole number
+- Tracking any remaining uninvested cash
+- Calculating updated portfolio composition by percentage of total value
+![Rebalancing Logic](visuals/Final_Suggestions.png)
 
-### 4. 📊 Portfolio Rebalancing Logic
-
-- Defined current ETF holdings (number of shares)
-- Forecasted ETF return weights were used to allocate new investment (e.g., $3000)
-- Rounded share purchase quantities to nearest integers
-- Tracked remaining uninvested cash
-- Calculated final portfolio percentages
-
-### 5. 📋 Reporting & Visualization
-
-- Generated styled tables to:
-  - Compare strategy performance metrics
-  - Display share purchase recommendations
-  - Highlight best-performing strategies
-
-- Used `pandas.style` for:
-  - Gradient bars on annual return and drawdown
-  - Sharpe/Sortino highlighting
-  - Bordered rows for optimal strategies
-
----
-
-## 🔍 Sample Output
-
-| Strategy | Annual Return | Sharpe Ratio | Sortino Ratio |
-|----------|----------------|--------------|---------------|
-| Lump Sum Optimized ✅ | 12.5% | **1.43** | 2.10 |
-| DCA Forecast-Based (2 Months) ⭐ | 11.7% | **1.38** | 2.05 |
-
----
-
-## 🛠 Technologies Used
+## Technologies Used
 
 - Python, Jupyter Notebook
-- `pandas`, `Prophet`, `matplotlib`, `numpy`
+- `pandas`, `Prophet`, `matplotlib`, `numpy`, 'Scikit-Learn'
 - `pandas.style` for visual reporting
-- Optional: `plotly`, `tabulate`, `lux`, `openpyxl`
 
----
-
-## 📂 Folder Structure
 
