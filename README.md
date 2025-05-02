@@ -1,6 +1,6 @@
 # Portfolio-Investment-Strategy-using-Prophet-Model
 ## Summary
-This project demonstrates a project for evaluating and optimizing ETF investment strategies using prophet forecast based rebalancing. Dollar Cost Averaginf Period is optimized using parameters Sharpe and Sortino Ratio. Based on Optimized Strategy, dynamic rebalancing suggestions are given.
+This project focuses on evaluating and optimizing ETF investment strategies through forecast-based rebalancing using Prophet. The Dollar Cost Averaging (DCA) interval is optimized based on risk-adjusted performance metrics, specifically Sharpe and Sortino ratios. The final model provides dynamic rebalancing recommendations aligned with the selected optimal strategy.
 
 ---
 
@@ -29,7 +29,7 @@ This project demonstrates a project for evaluating and optimizing ETF investment
 - Exported forecasted returns into separate CSVs for investment simulation, and showed enhanced MAE of optimized prophet model.
 ![Prophet Model](visuals/Prophet_Model.png)
 ![Prophet Model](visuals/Prophet_Model_Optimized.png)
-![Model Comparison](visuals/Model_Accuracy_Comparison.png)
+![Model Comparison](visuals/Model_Accuracy_Comparison.PNG)
 
 ### 3. Strategy Simulation & Backtesting
 To investigate best strategies for investment, multiple strategies are simulated under following Condtions:
@@ -42,7 +42,7 @@ To investigate best strategies for investment, multiple strategies are simulated
 Among all strategies, Optimized Lump Sum strategies showed the best total return (with allocations of SPY: 29.20% QQQ: 19.01% SCHD: 10.96% TLTW: 10.91% GLD: 29.92%)
 ![Portfolio Comparison](visuals/Portfollio_Comparison.png)
 After simulating various strategies, key performance metrics—cumulative return, annual return, volatility, drawdown, Sharpe ratio, and Sortino ratio—were calculated for comparison. While the Lump Sum strategy achieved the highest returns and risk-adjusted performance, it also carried greater drawdown and requires large upfront capital. Therefore, this project adopts the DCA with 2-month rebalancing strategy, which demonstrated the strongest Sharpe and Sortino ratios among all DCA methods, offering a more practical and balanced approach for most investors.
-![Portfolio Comparison](visuals/Portfollio_Comparison_table.png)
+![Portfolio Comparison](visuals/Portfollio_Comparison_table.PNG)
 
 ### 4. Portfolio Rebalancing Logic
 Finally, the model uses current ETF holdings and a new investment amount (e.g., $3000) to generate a realistic and actionable rebalancing plan. Key steps include:
@@ -51,7 +51,7 @@ Finally, the model uses current ETF holdings and a new investment amount (e.g., 
 - Rounding share purchases to the nearest whole number
 - Tracking any remaining uninvested cash
 - Calculating updated portfolio composition by percentage of total value
-![Rebalancing Logic](visuals/Final_Suggestions.png)
+![Rebalancing Logic](visuals/Final_Suggestions.PNG)
 
 ## Technologies Used
 
