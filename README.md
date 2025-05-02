@@ -1,6 +1,6 @@
 # Portfolio-Investment-Strategy-using-Prophet-Model
 ## Summary
-This project focuses on evaluating and optimizing ETF investment strategies through forecast-based rebalancing using Prophet. The Dollar Cost Averaging (DCA) interval is optimized based on risk-adjusted performance metrics, specifically Sharpe and Sortino ratios. The final model provides dynamic rebalancing recommendations aligned with the selected optimal strategy.
+This project focuses on evaluating and optimizing ETF investment strategies through forecast-based rebalancing using Prophet. A 4-week return forecasting model was applied per ETF(SPY, QQQ, SCHD, TLTW, GLD), and Dollar Cost Averaging (DCA) intervals were optimized using risk-adjusted performance metrics. Among all simulated strategies, the Lump Sum Optimized approach achieved the highest annual return of 18.84%, with a Sharpe ratio of 1.29 and Sortino ratio of 1.95, but also exhibited a maximum drawdown of -9.24%. Due to the impracticality of a single large investment, the project selects the DCA Forecast-Based (2 Months) strategy as the final rebalancing logic, offering a Sharpe ratio of 0.47, Sortino ratio of 0.78, and a more accessible investment plan for typical investors.
 
 ---
 
