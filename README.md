@@ -56,7 +56,7 @@ Finally, the model uses current ETF holdings and a new investment amount (e.g., 
 ## Technologies Used
 
 - Python, Jupyter Notebook
-- `pandas`, `Prophet`, `matplotlib`, `numpy`, 'Scikit-Learn'
+- `pandas`, `Prophet`, `matplotlib`, `numpy`, `Scikit-Learn`
 - `pandas.style` for visual reporting
 
 
