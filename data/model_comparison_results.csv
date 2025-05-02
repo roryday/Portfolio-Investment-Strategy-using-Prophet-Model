@@ -1,0 +1,8 @@
+Strategy,Total Return (%),Annual Return (%),Annual Volatility (%),Max Drawdown (%),Sharpe Ratio,Sortino Ratio
+Lump Sum,42.23,15.57,10.89,-9.24,1.03,1.57
+Lump Sum Optimized,54.36,18.84,11.22,-9.24,1.29,1.95
+DCA Equal,20.0,6.29,10.6,-5.42,0.17,0.28
+DCA Forecast-Based,33.0,9.36,12.02,-5.38,0.41,0.67
+DCA Forecast-Based (2 Months),33.26,10.32,12.58,-5.24,0.47,0.78
+DCA Forecast-Based (4 Months),35.93,10.04,13.04,-5.55,0.43,0.6
+DCA Forecast-Based (6 Months),28.17,11.39,14.5,-8.22,0.44,0.58
